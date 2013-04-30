@@ -1,4 +1,5 @@
 ## Scoots!
+=======
 
 Scoots is a very simple and lightweight **IRC link information bot** written in Ruby.
 
@@ -7,7 +8,6 @@ This bot is still in development. Scoots requires the 'mechanize' gem to functio
 For Lincense information view the LICENSE file.
 
 **Setup & Installation**
-=======
 
 You can use Scoots on your own IRC server or in your own IRC channel on another server.
 
