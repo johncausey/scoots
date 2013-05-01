@@ -22,7 +22,7 @@ module Vocals
       when "!stack"
         say_to_chan("I like to use RVM for Ruby management and PostgreSQL as a database. SQLite3 is best used only in development.")
       when "!whatareyou"
-        say_to_chan("I'm scootsbot! I'm here to provide URL information inside the chat window.")
+        say_to_chan("I'm scoots, I'm here to provide URL information inside the chat window.")
       when "!servers"
         say_to_chan("Here are some great hosting options: http://www.linode.com/ http://www.site5.com/p/ruby/ https://www.engineyard.com/ https://www.heroku.com/")
       when "!music"

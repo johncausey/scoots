@@ -55,6 +55,14 @@ class ScootsBot < Settings
   end
 end
 
+# Scoots can perform dirty logging of your channel. Note that public logging of many IRC channels is prohibited.
+# $stdout.reopen("logs/normaloutput.txt", "w")
+
+$stderr.reopen("logs/errors.txt", "w")
+
+#puts 'stdout for scoots operation'
+warn 'stderr for broken scoots'
+
 
 scoots = ScootsBot.new(data.first.server_to_join, data.first.port_to_use, data.first.channel_to_join, data.first.bot_name_to_use)
 
