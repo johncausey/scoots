@@ -1,6 +1,6 @@
 ---
 - !ruby/object:Settings
-  channel_to_join: # channel name here
-  server_to_join: # irc.freenode.net
-  port_to_use: # 6667
-  bot_name_to_use: # bot name to use
+  channel_to_join: scootschannel # channel to join goes here
+  server_to_join: irc.freenode.net # server goes here
+  port_to_use: 6667 # port to use goes here
+  bot_name_to_use: scoots # bot name to use goes here

@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
 
 require 'socket'
-require 'uri'
+require 'open-uri'
 require 'yaml'
 require 'mechanize'
+require 'nokogiri'
 
 require_relative 'lib/vocals'
 require_relative 'lib/urlhandlers'
+require_relative 'lib/decision'
 
 class Settings
   attr_accessor :server_to_join, :port_to_use, :channel_to_join, :bot_name_to_use
@@ -18,7 +20,7 @@ data = YAML::load(File.open(FILENAME))
 
 class ScootsBot < Settings
 
-  include Vocals, UrlHandlers
+  include Vocals, UrlHandlers, Decision
 
   def initialize(server, port, channel, bot_name)
     @channel = channel
@@ -40,11 +42,7 @@ class ScootsBot < Settings
       if msg.match(/PRIVMSG ##{@channel} :(.*)$/)
         content = $~[1]
 
-        if is_a_link(content)
-          tell_chan_title(@strippedlink)
-        else
-          repeats(content)
-        end
+        decide(content)
       end
     end
   end
@@ -64,7 +62,11 @@ $stderr.reopen("logs/errors.txt", "w")
 warn 'stderr for broken scoots'
 
 
-scoots = ScootsBot.new(data.first.server_to_join, data.first.port_to_use, data.first.channel_to_join, data.first.bot_name_to_use)
+scoots = ScootsBot.new(
+  data.first.server_to_join,
+  data.first.port_to_use,
+  data.first.channel_to_join,
+  data.first.bot_name_to_use)
 
 trap("INT"){ scoots.quit }
 
