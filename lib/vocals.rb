@@ -13,8 +13,8 @@ module Vocals
 
   def repeats(content)
     case content.strip
-      when "!hello"
-        say_to_chan("Hey!")
+      when "hey scoots"
+        say_to_chan("Hello!")
       when "!resources"
         say_to_chan("Some great rails resources can be found here: http://railsforzombies.org/ http://railscasts.com/ http://ruby.railstutorial.org/")
       when "!versions"
@@ -28,7 +28,7 @@ module Vocals
       when "!music"
         say_to_chan("http://www.youtube.com/watch?v=abSadQcziEM")
       when "!help"
-        say_to_chan("Hey! I'm still being worked on at the moment so I apologize if I go offline or break. Right now I can check page titles; more ability will be added soon, such as displaying image, github, and video data.")
+        say_to_chan("I'm a bot. I can recognize stackoverflow, github, wikipedia, and youtube links right now with more added later. I'm still in development.")
     end
   end
 
