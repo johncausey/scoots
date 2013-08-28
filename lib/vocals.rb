@@ -11,6 +11,11 @@ module Vocals
     say "PRIVMSG ##{@channel} :#{msg}"
   end
 
+  ###
+  ### Scoots is not designed to house a high number of string callbacks - To add this function, consider having Scoots add options in a database straight
+  ### from the IRC channel, filtered by user. This case statement is just used for a few to keep it simple.
+  ###
+
   def repeats(content)
     case content.strip
       when "hey scoots"

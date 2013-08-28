@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
 module Decision
-  # Needs to be refacotred. More data options can be easily added to each white-url; will escape out if data is missing so scoots doesn't die.
+  ###
+  ### This section is verbose to demonstrate basic action chaining for Scoots. Refactor for proper use.
+  ###
 
-  # wikipedia data grab
+  # wikipedia data grab example
   def wiki_get(url)
     begin
       data = Nokogiri::HTML(open(url))
@@ -17,7 +19,7 @@ module Decision
     end
   end
 
-  # github data grab
+  # github data grab example
   def git_get(url)
     begin
       title = Mechanize.new.get(url).title
@@ -30,7 +32,7 @@ module Decision
     end
   end
 
-  # youtube data grab
+  # youtube data grab example
   def tube_get(url)
     begin
       data = Nokogiri::HTML(open(url))
@@ -44,7 +46,7 @@ module Decision
     end
   end
 
-  # stackoverflow data grab
+  # stackoverflow data grab example
   def so_get(url)
     begin
       data = Nokogiri::HTML(open(url))

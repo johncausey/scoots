@@ -16,6 +16,10 @@ class Settings
 
 end
 
+###
+### Could use a heavy refactor to control Scoots autojoining the channel after a timeout only on specific actions.
+###
+
 data = YAML::load(File.open(File.expand_path('../settings/settings.yml', __FILE__)))
 
 class ScootsBot < Settings
@@ -71,7 +75,10 @@ class ScootsBot < Settings
 
 end
 
-# Scoots can perform dirty logging of your channel. Note that public logging of many IRC channels is prohibited.
+###
+### Scoots can perform dirty logging of your channel. Note that public logging of many IRC channels is prohibited.
+###
+
 $stdout.reopen(File.expand_path('../logs/normaloutput.txt', __FILE__), "w")
 $stderr.reopen(File.expand_path('../logs/errors.txt', __FILE__), "w")
 
