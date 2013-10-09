@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 module UrlHandlers
 
   def strip_link(text)

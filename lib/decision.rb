@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 module Decision
   ###
   ### This section is verbose to demonstrate basic action chaining for Scoots. Refactor for proper use.
@@ -75,8 +74,6 @@ module Decision
       else
         tell_chan_title(link)
       end
-    else
-      repeats(content)
     end
   end
 
