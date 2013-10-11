@@ -13,13 +13,10 @@ How to Start
 
 You can use Scoots on your own IRC server or in your own IRC channel on another server. Scoots is designed to run as a daemon in the background. Errors will be logged inside the logs folder.
 
-1. Edit the settings.yml file to set your bot, server, and channel information.
-
-2. Run the init script;
+Edit the settings.yml file to set your bot, server, and channel information. Then run the init script;
 
 
-
-    ruby init.rb start
+      ruby init.rb start
 
 
 Operations
