@@ -1,4 +1,3 @@
+
 # Ignore error log files.
 logs/errors.txt
-logs/normaloutput.txt
-
