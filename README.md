@@ -17,6 +17,8 @@ You can use Scoots on your own IRC server or in your own IRC channel on another 
 
 2. Run the init script;
 
+
+
     ruby init.rb start
 
 
