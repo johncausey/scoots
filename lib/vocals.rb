@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 module Vocals
   def say(msg)
     puts msg

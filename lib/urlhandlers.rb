@@ -1,6 +1,4 @@
-#!/usr/bin/env ruby
 module UrlHandlers
-
   def strip_link(text)
     link = /(http|www)\S+/.match(text)
     link
@@ -17,7 +15,6 @@ module UrlHandlers
     false
   end
 
-  # Basic URL title login, also the fallback location for Decision.
   def tell_chan_title(text)
     begin
       title = Mechanize.new.get(text).title

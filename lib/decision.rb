@@ -1,9 +1,4 @@
-#!/usr/bin/env ruby
 module Decision
-  ###
-  ### This section is verbose to demonstrate basic action chaining for Scoots. Refactor for proper use.
-  ###
-
   # wikipedia data grab example
   def wiki_get(url)
     begin
